@@ -1,0 +1,4 @@
+[submodule "third_party/px4"]
+	path = third_party/px4
+	url = https://github.com/PX4/PX4-Autopilot
+	branch = release/1.16
