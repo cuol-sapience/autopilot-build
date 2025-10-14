@@ -6,4 +6,4 @@ include(ExternalProject)
 include(third_party/px4.cmake)
 
 px4_build(px4_fmu-v6c)
-px4_build(cubepilot_cubeorange)
+px4_build(cubepilot_cubeorangeplus)
