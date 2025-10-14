@@ -8,6 +8,7 @@ ExternalProject_Add(px4_${target}
     USES_TERMINAL_BUILD  TRUE
     USES_TERMINAL_INSTALL TRUE
     CMAKE_ARGS -DCONFIG=${target} -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+    CMAKE_CACHE_ARGS "-DBOARD_CONFIG:FILEPATH=${CMAKE_CURRENT_SOURCE_DIR}/px4/${target}.boardconfig"
 )
 ExternalProject_Add_StepTargets(px4_${target} build install)
 
