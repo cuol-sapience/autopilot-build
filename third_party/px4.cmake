@@ -23,11 +23,11 @@ ExternalProject_Get_property(${drone_name}_px4_${target} BINARY_DIR SOURCE_DIR)
 install(CODE "
     file(GLOB PX4_FILES \"${BINARY_DIR}/*.px4\")
     file(INSTALL \${PX4_FILES} 
-        DESTINATION \"${PX4_INSTALL_DIR}/${target}\")
+        DESTINATION \"${PX4_INSTALL_DIR}/${drone_name}_${target}\")
 ")
 
 file(READ ${PX4_LOCAL_SOURCE_DIR}/src/modules/uxrce_dds_client/dds_topics.yaml FILE_CONTENTS)
-string(REPLACE "/fmu/" "/fmu/${drone_name}/" FILE_CONTENTS ${FILE_CONTENTS})
+string(REPLACE "/fmu/" "/${drone_name}/fmu/" FILE_CONTENTS ${FILE_CONTENTS})
 file(WRITE ${PX4_LOCAL_SOURCE_DIR}/src/modules/uxrce_dds_client/dds_topics.yaml ${FILE_CONTENTS})
 
 endmacro()
