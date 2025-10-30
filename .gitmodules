@@ -2,7 +2,3 @@
 	path = third_party/px4
 	url = https://github.com/PX4/PX4-Autopilot
 	branch = release/1.16
-[submodule "third_party/ardupilot"]
-	path = third_party/ardupilot
-	url = https://github.com/ArduPilot/ardupilot
-	branch = 1ebd4d996e8b6bbeb1462a9655c00aa861d5beef
