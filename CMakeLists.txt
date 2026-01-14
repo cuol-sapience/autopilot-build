@@ -4,12 +4,8 @@ project(sapience_autopilot)
 
 include(ExternalProject)
 include(third_party/px4.cmake)
-include(third_party/ardupilot.cmake)
 
+#include(third_party/ardupilot.cmake)
 #ardupilot_build(CubeOrangePlus)
 
-#px4_build(px4_fmu-v6c octavius)
-#px4_build(cubepilot_cubeorangeplus)
-
-
-px4_build(cubepilot_cubeorangeplus octavius)
+px4_build(px4_fmu-v6c)
